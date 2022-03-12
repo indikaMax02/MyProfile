@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple web layout</title>
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <style>
+
+
+        body > header {
+            /* border: 1px solid red;*/
+            position: relative;
+            box-shadow: 2px -4px 0px 9px black;
+        }
+
+        body > header > img {
+            margin: 2px;
+            width: 250px;
+            height: 50px;
+        }
+
+        body > header > ul {
+            position: absolute;
+            right: 30px;
+            top: -10px;
+            list-style: none;
+        }
+
+        body > header > ul > li {
+            display: inline-block;
+            font-size: 30px;
+            font-family: 'Playfair Display', serif;
+            padding: 0px 10px 0px 10px;
+
+        }
+
+        body > header > ul > li:hover {
+            cursor: pointer;
+            color: red;
+        }
+        body>main>nav{
+            position: absolute;
+            width: 250px;
+            top: 0;
+            bottom: 0;
+            background: indigo;
+            margin: auto;
+            min-height: 100px;
+        }
+
+        body>main{
+            /*            border: 1px solid red;*/
+            position: relative;
+        }
+        body>main>nav>ul{
+            list-style: none;
+            font-family: 'Playfair Display', serif;
+            display: flow-root;
+            font-size: 30px;
+            color: white;
+            padding: 0px 10px 0px 10px;
+        }
+
+        body>main>nav>ul>li{
+            padding: 10px;
+            /*         display: inline-block;*/
+        }
+        body>main>section{
+            margin-left: 255px;
+            padding: 7px;
+            min-height: 1000px;
+        }
+        body>main>section>section{
+            height: 250px;
+            position: relative;
+        }
+        body>main>section>section>img{
+            border-left: 5px solid white;
+            border-top: 5px solid white;
+            position: absolute;
+            width: calc(100%/3);
+            height: 100%;
+        }
+
+        body>main>section>section>img:nth-child(1){
+            left: 0;
+        }
+        body>main>section>section>img:nth-child(2){
+            left: calc(100% / 3);
+            background-size: cover;
+        }
+        body>main>section>section>img:nth-child(3){
+            right: 0;
+        }
+        body>footer{
+            background-color: #3d3838;
+            height: 50px;
+        }
+
+        body>footer>p{
+            margin: auto;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            font-weight: bold;
+        }
+
+        @media all and (max-width: 500px) {
+            body>header {
+                height: 80px;
+            }
+            body > header > img {
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+                top: 10px;
+            }
+            body > header > ul {
+                right: 30px;
+                bottom: 10px;
+                left: 0;
+                right: 0;
+                font-size: 19px;
+                width: max-content;
+                margin: auto;
+                padding-left: 0;
+            }
+
+            body > main > nav {
+                display: none;
+            }
+
+            body > main > section {
+                margin-left: 0;
+            }
+
+            body > main > section > section {
+                flex-direction: column;
+                height: 699px;
+            }
+        }
+
+        @media all and (min-width: 500px) and (max-width: 800px) {
+            body > header {
+                height: 80px;
+            }
+        }
+        @media all and (min-width: 800px) and (max-width: 1200px) {
+            body > header {
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="assets/images/ijselogo.png">
+
+    <ul>
+        <li>Home</li>
+        <li>Service</li>
+        <li>Contacts</li>
+        <li>About me</li>
+    </ul>
+</header>
+<main>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Service</li>
+            <li>Contacts</li>
+            <li>About me</li>
+        </ul>
+    </nav>
+    <section>
+        <section>
+            <img src="assets/images/img1.jpg" width="300">
+            <img src="assets/images/img2.jpg" width="300">
+            <img src="assets/images/img3.jpg" width="300">
+        </section>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias architecto aspernatur autem
+            doloribus eligendi eos hic, magni molestias necessitatibus nobis, officia repudiandae sequi similique
+            tempora tempore vel voluptatum. Enim.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias architecto aspernatur autem
+            doloribus eligendi eos hic, magni molestias necessitatibus nobis, officia repudiandae sequi similique
+            tempora tempore vel voluptatum. Enim.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias architecto aspernatur autem
+            doloribus eligendi eos hic, magni molestias necessitatibus nobis, officia repudiandae sequi similique
+            tempora tempore vel voluptatum. Enim.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias architecto aspernatur autem
+            doloribus eligendi eos hic, magni molestias necessitatibus nobis, officia repudiandae sequi similique
+            tempora tempore vel voluptatum. Enim.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias architecto aspernatur autem
+            doloribus eligendi eos hic, magni molestias necessitatibus nobis, officia repudiandae sequi similique
+            tempora tempore vel voluptatum. Enim.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias architecto aspernatur autem
+            doloribus eligendi eos hic, magni molestias necessitatibus nobis, officia repudiandae sequi similique
+            tempora tempore vel voluptatum. Enim.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias architecto aspernatur autem
+            doloribus eligendi eos hic, magni molestias necessitatibus nobis, officia repudiandae sequi similique
+            tempora tempore vel voluptatum. Enim.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias architecto aspernatur autem
+            doloribus eligendi eos hic, magni molestias necessitatibus nobis, officia repudiandae sequi similique
+            tempora tempore vel voluptatum. Enim.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias architecto aspernatur autem
+            doloribus eligendi eos hic, magni molestias necessitatibus nobis, officia repudiandae sequi similique
+            tempora tempore vel voluptatum. Enim.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias architecto aspernatur autem
+            doloribus eligendi eos hic, magni molestias necessitatibus nobis, officia repudiandae sequi similique
+            tempora tempore vel voluptatum. Enim.</p>
+    </section>
+</main>
+<footer>
+    <p> Developed By IJSE</p>
+</footer>
+</body>
+</html>

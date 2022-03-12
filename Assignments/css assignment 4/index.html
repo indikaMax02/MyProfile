@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>assignment 4</title>
+
+    <style>
+        section {
+            height: 700px;
+            border: 2px solid red;
+        }
+
+        body > section>h1{
+            background-color: red;
+            z-index: 10;
+            text-align: left;
+            color: green;
+            font-size: 70px;
+            position: sticky;
+            top: 0px;
+            left: 0px;
+            height: 70px;
+            margin: 0;
+        }
+
+        body section>div {
+            padding: 0 30px;
+            position: sticky;
+            font-size: 100px;
+            top: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section:nth-child(1) {background-color: #F8F155;}
+        section:nth-child(2) {background-color: aqua;}
+        section:nth-child(3) {background-color: gray;}
+        section:nth-child(4) {background-color: sandybrown;}
+        section:nth-child(5) {background-color: darkblue;}
+    </style>
+
+</head>
+
+<body>
+
+<section>
+    <h1>Card 1</h1>
+    <div>Hello</div>
+</section>
+<section>
+    <h1>Card 2</h1>
+    <div>How</div>
+</section>
+<section>
+    <h1>Card 3</h1>
+    <div>Are</div>
+</section>
+<section>
+    <h1>Card 4</h1>
+    <div>Yoy..?</div>
+</section>
+
+</body>
+</html>
