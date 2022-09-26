@@ -1,10 +1,11 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');*/
 
 :root{
-    --yellow:#f9ca24;
+    --yellow: #8f22ef;
     --blue : rgb(25, 0, 253);
     --liner :linear-gradient(to top left,red, yellow);
-    --color: #732ae7de;
+    --color: rgba(211, 18, 229, 0.87);
+    --homeColor: rgba(0, 255, 255, 0.87);
 }
 
 
@@ -33,7 +34,7 @@ html::-webkit-scrollbar{
 }
 
 html::-webkit-scrollbar-track{
-    background: #1943e3;
+    background: #000000;
 }
 
 html::-webkit-scrollbar-thumb{
@@ -88,8 +89,7 @@ header{
     z-index: 1000;
     height:100%;
     width:35rem;
-    background:linear-gradient(to left top, #13c8e0, #e100ff);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px rgb(0 0 0);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,17 +108,17 @@ header .user img{
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
-    border:.7rem solid var(--blue);
+    border: 0.7rem solid rgb(173 107 239);
 }
 
 header .user .name{
     font-size: 3.5rem;
-    color:#fff;
+    color: #130838;
 }
 
 header .user .post{
     font-size: 2rem;
-    color:#eee;
+    color: #130838;
 }
 
 header .navbar{
@@ -136,7 +136,7 @@ header .navbar ul li a{
     padding:1rem;
     margin:1.5rem 0;
 /* From https://css.glass */
-background: rgba(0, 0, 0, 0.24);
+    background: rgba(0, 0, 0, 0.73);
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(12.7px);
@@ -168,7 +168,7 @@ header .navbar ul li a:hover{
     flex-flow: column;
     padding:0 15rem;
 
-    background:linear-gradient(purple, var(--color));
+    background:linear-gradient(purple, var(--homeColor));
 
 }
 
@@ -259,7 +259,7 @@ header .navbar ul li a:hover{
 }
 
 .home h1 span{
-    color:var(--yellow);
+    color: #00ffd0;
 }
 
 .home p{
@@ -495,7 +495,6 @@ header .navbar ul li a:hover{
 
 
 .portfolio .box-container{
-    background-color: #1943e3;
     display: flex;
     align-items: center;
     justify-content: center;
